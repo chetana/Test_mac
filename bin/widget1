@@ -1,0 +1,8 @@
+root:
+    type:     scroller
+    background: red
+    source:
+        - type: label
+          source: 'item1'
+        - type: label
+          source: 'item2'

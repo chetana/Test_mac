@@ -1,0 +1,52 @@
+_:
+    application:
+        catalog_version:
+            - setup: [_set, 'settings.font.size', '50']
+            
+    on:
+        show:
+            - [_set, 'config', [_include, config]]
+
+root:
+    background: white
+    type:   ascii
+    layout: 
+        portrait: |
+            +---+---+
+            | a |   |
+            +---+---+
+            | b | d |
+            +---+---+
+            | c | e |
+            +---+---+
+        landscape: |
+            +---+---+---+
+            | a | b | c |
+            +---+---+---+
+             80% 10% 10%
+    source:
+        a: :widget1:root
+
+        b: :widget2
+        
+        c:
+            type:       label
+            background: green
+            source:     ' '
+            size:       50
+        d:
+            type:       image
+            source:     title-galleries@2x.png
+        e:
+            type:       label
+            background: white
+            source:     <config.subscriptions>
+            size:       10
+widget2:
+    type:   scroller
+    source:
+        each:   [value, i, ['item1', 'item2', 'item3', 'item4']]
+        do:
+            type:   label
+            source: '<@i>: <@value>'
+            size: 50

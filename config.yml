@@ -1,0 +1,8 @@
+
+subscriptions:
+    - name:         1 Month
+      product_id:   com.daily_news_ios.daily_news.subscription.1_month_0
+    - name:         6 Months
+      product_id:   com.daily_news_ios.daily_news.subscription.6_months_0
+    - name:         1 Year
+      product_id:   com.daily_news_ios.daily_news.subscription.1_year_0
